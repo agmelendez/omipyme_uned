@@ -1,0 +1,775 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2026-01-14",
+    "schema": "omipyme-observatory-v2",
+    "language": "es-CR"
+  },
+  "organizacion": {
+    "nombre": "Observatorio de MiPYMES (OMiPYME+)",
+    "nombreCorto": "OMiPYME",
+    "institucion": {
+      "nombre": "Universidad Estatal a Distancia",
+      "siglas": "UNED",
+      "pais": "Costa Rica",
+      "url": "https://www.uned.ac.cr"
+    },
+    "unidadAcademica": "Escuela de Ciencias de la Administración",
+    "descripcion": "Genera conocimiento, estrategias y prototipos para mejorar las capacidades para emprender e innovar de la población costarricense, con un enfoque en el desarrollo desde los territorios, sostenible y biocéntrico.",
+    "mision": "Generar y difundir conocimiento sobre las micro, pequeñas y medianas empresas costarricenses para contribuir al diseño de políticas públicas y al fortalecimiento del ecosistema emprendedor nacional.",
+    "vision": "Ser el observatorio de referencia en Centroamérica para el estudio y análisis del sector MIPYME, reconocido por la calidad de sus datos, la innovación de sus herramientas y el impacto de sus investigaciones.",
+    "valores": [
+      "Rigor científico",
+      "Innovación",
+      "Inclusión",
+      "Sostenibilidad",
+      "Colaboración"
+    ],
+    "enfoques": [
+      "Desarrollo territorial",
+      "Sostenibilidad",
+      "Enfoque biocéntrico",
+      "Inclusión de género",
+      "Digitalización"
+    ],
+    "logos": {
+      "principal": "/assets/logos/omipyme-logo.png",
+      "horizontal": "/assets/logos/omipyme-logo-horizontal.png",
+      "favicon": "/assets/logos/favicon.png"
+    },
+    "redesSociales": {
+      "facebook": "https://facebook.com/omipymeuned",
+      "instagram": "https://instagram.com/omipymeuned",
+      "linkedin": "https://linkedin.com/company/omipyme-uned",
+      "youtube": "https://youtube.com/@omipymeuned"
+    }
+  },
+  "pilares": [
+    {
+      "id": "observatorio",
+      "nombre": "Observatorio de Datos",
+      "descripcion": "Centraliza datos, indicadores y resultados de investigación cuantitativa sobre el sector MIPYME costarricense.",
+      "icono": "chart-bar",
+      "color": "#1B4F72",
+      "ruta": "/observatorio"
+    },
+    {
+      "id": "herramientas",
+      "nombre": "Herramientas Digitales",
+      "descripcion": "Aplicaciones interactivas para diagnóstico, planificación y toma de decisiones empresariales.",
+      "icono": "tools",
+      "color": "#E67E22",
+      "ruta": "/herramientas"
+    },
+    {
+      "id": "investigacion",
+      "nombre": "Investigación",
+      "descripcion": "Producción académica y científica sobre emprendimiento, innovación y desarrollo empresarial.",
+      "icono": "book-open",
+      "color": "#27AE60",
+      "ruta": "/investigacion"
+    },
+    {
+      "id": "formacion",
+      "nombre": "Formación",
+      "descripcion": "Recursos educativos estructurados para desarrollo de capacidades emprendedoras e innovadoras.",
+      "icono": "graduation-cap",
+      "color": "#8E44AD",
+      "ruta": "/formacion"
+    },
+    {
+      "id": "ecosistema",
+      "nombre": "Ecosistema MIPYME",
+      "descripcion": "Conexión entre actores del ecosistema empresarial, eventos, ferias y servicios de apoyo.",
+      "icono": "network",
+      "color": "#16A085",
+      "ruta": "/ecosistema"
+    }
+  ],
+  "proyectos": {
+    "activos": [
+      {
+        "id": "selfie-distrital",
+        "nombre": "Selfie Distrital",
+        "descripcion": "Plataforma web interactiva con diagnóstico territorial que incluye distribución de patentes comerciales por distrito, mapas interactivos del Índice de Oportunidades Económicas, infografías cantonales y ejemplos de prompts para análisis con ChatGPT.",
+        "estado": "activo",
+        "pilar": "herramientas",
+        "url": "https://omipymes.uned.ac.cr/selfiedistrital/",
+        "tipo": "aplicacion-web",
+        "tecnologias": ["R Shiny", "Leaflet", "ggplot2"],
+        "audiencia": ["emprendedores", "funcionarios", "investigadores"],
+        "cobertura": {
+          "provincias": 7,
+          "cantones": 82,
+          "distritos": 488
+        },
+        "imagen": "/assets/proyectos/selfie-distrital.png"
+      },
+      {
+        "id": "territorio-vivo",
+        "nombre": "Territorio Vivo",
+        "descripcion": "Aplicación integral de análisis territorial con datos específicos de cantones, regiones y distritos en más de 80 temas y 250 indicadores socioeconómicos. Diseñada para investigadores, municipalidades, ministerios y tomadores de decisiones.",
+        "estado": "activo",
+        "pilar": "herramientas",
+        "url": "https://agustingomez59.wixsite.com/territoriovivo",
+        "tipo": "aplicacion-web",
+        "tecnologias": ["Wix", "Tableau"],
+        "audiencia": ["investigadores", "funcionarios", "municipalidades"],
+        "indicadores": 250,
+        "temas": 80,
+        "imagen": "/assets/proyectos/territorio-vivo.png",
+        "migracionPendiente": true
+      },
+      {
+        "id": "obi-chatbot",
+        "nombre": "OBI - Chatbot de Trámites",
+        "descripcion": "Asistente conversacional inteligente que proporciona información clave sobre trámites financieros, logísticos y de formalización para emprendedores y PYMES costarricenses.",
+        "estado": "activo",
+        "pilar": "herramientas",
+        "url": "https://omipymes.uned.ac.cr/chatbot",
+        "tipo": "chatbot",
+        "tecnologias": ["NLP", "Base de conocimiento"],
+        "audiencia": ["emprendedores", "mipymes"],
+        "imagen": "/assets/proyectos/obi.png"
+      },
+      {
+        "id": "asistente-omipyme",
+        "nombre": "Asistente OMiPYME IA",
+        "descripcion": "GPT personalizado que realiza análisis comercial instantáneo de todos los cantones, consultas sobre patentes y oportunidades de exploración temática basado en datos del observatorio.",
+        "estado": "activo",
+        "pilar": "herramientas",
+        "url": "https://chatgpt.com/g/g-UKpcQkwMI-omipymes-uned-selfie-distrital",
+        "tipo": "gpt-personalizado",
+        "tecnologias": ["OpenAI GPT-4", "RAG"],
+        "audiencia": ["emprendedores", "investigadores"],
+        "acceso": "gratuito-limitado",
+        "imagen": "/assets/proyectos/asistente-ia.png"
+      },
+      {
+        "id": "bachillerato-empleabilidad",
+        "nombre": "Bachillerato para la Empleabilidad y el Emprendimiento",
+        "descripcion": "Programa educativo formal para personas adultas que brinda acceso a educación de calidad en empleabilidad y emprendimiento, desarrollando competencias para el empleo digno, la ciudadanía responsable y el emprendimiento sostenible.",
+        "estado": "activo",
+        "pilar": "formacion",
+        "url": "https://express.adobe.com/page/89X9yNzgKBnJR/",
+        "tipo": "programa-educativo",
+        "modalidad": "educacion-distancia",
+        "duracion": "2 años",
+        "audiencia": ["adultos", "trabajadores"],
+        "imagen": "/assets/proyectos/bachillerato.png"
+      },
+      {
+        "id": "academia-empresarias",
+        "nombre": "Academia de Empresarias",
+        "descripcion": "Proyecto de empoderamiento femenino que ofrece talleres con técnicas de apoyo para el quehacer laboral y personal de mujeres empresarias, fomentando la interacción, el intercambio de conocimientos y experiencias entre participantes.",
+        "estado": "activo",
+        "pilar": "ecosistema",
+        "url": "https://express.adobe.com/page/8DiMaHZOoJvLq/",
+        "tipo": "programa-capacitacion",
+        "audiencia": ["mujeres-empresarias"],
+        "enfoque": "genero",
+        "imagen": "/assets/proyectos/academia-empresarias.png"
+      },
+      {
+        "id": "mhadi",
+        "nombre": "MHADI - Museo Histórico Abierto Digital",
+        "descripcion": "Espacio único de interacción con la historia de Costa Rica mediante tecnologías innovadoras como realidad aumentada, gamificación y narrativas inmersivas para explorar el ser costarricense.",
+        "estado": "activo",
+        "pilar": "ecosistema",
+        "url": "https://mhadi.uned.ac.cr/",
+        "tipo": "museo-digital",
+        "tecnologias": ["Realidad Aumentada", "Gamificación", "Web 3D"],
+        "audiencia": ["publico-general", "estudiantes", "turistas"],
+        "imagen": "/assets/proyectos/mhadi.png"
+      },
+      {
+        "id": "podcast",
+        "nombre": "Podcast Innovación y Emprendimiento",
+        "descripcion": "Serie de podcasts que presenta ideas simples y potentes de personas costarricenses innovadoras que están transformando el mercado nacional e internacional a través de sus emprendimientos.",
+        "estado": "activo",
+        "pilar": "formacion",
+        "url": "https://omipymes.uned.ac.cr/podcast/",
+        "tipo": "podcast",
+        "plataformas": ["Spotify", "Apple Podcasts", "Web"],
+        "audiencia": ["emprendedores", "publico-general"],
+        "imagen": "/assets/proyectos/podcast.png"
+      },
+      {
+        "id": "audiolibros",
+        "nombre": "Biblioteca de Audiolibros",
+        "descripcion": "Colección de contenidos en formato audio para el emprendimiento innovador y sostenible, disponibles en múltiples plataformas e idiomas para internacionalizar la oferta educativa.",
+        "estado": "activo",
+        "pilar": "formacion",
+        "url": "https://omipymes.uned.ac.cr/audiolibros/",
+        "tipo": "audiolibros",
+        "idiomas": ["español", "inglés"],
+        "audiencia": ["emprendedores", "estudiantes"],
+        "imagen": "/assets/proyectos/audiolibros.png"
+      },
+      {
+        "id": "diccionario-ngabe",
+        "nombre": "Diccionario Ngäbe",
+        "descripcion": "Aplicación web y móvil desarrollada colaborativamente con habitantes de territorios indígenas Ngäbes de la zona sur, que almacena más de 1,500 palabras para promover la revitalización, preservación y aprendizaje del idioma Ngäbe.",
+        "estado": "activo",
+        "pilar": "ecosistema",
+        "tipo": "aplicacion-cultural",
+        "palabras": 1500,
+        "colaboradores": "Comunidades Ngäbe zona sur",
+        "audiencia": ["comunidades-indigenas", "investigadores", "publico-general"],
+        "imagen": "/assets/proyectos/diccionario-ngabe.png"
+      }
+    ],
+    "enDesarrollo": [
+      {
+        "id": "guesss",
+        "nombre": "GUESSS Costa Rica",
+        "descripcion": "Participación en el Global University Entrepreneurial Spirit Students' Survey, proyecto de investigación internacional que estudia la intención emprendedora y actividad empresarial de estudiantes universitarios mediante comparación geográfica y temporal.",
+        "estado": "en-desarrollo",
+        "pilar": "investigacion",
+        "tipo": "investigacion-internacional",
+        "redInternacional": "GUESSS Global",
+        "imagen": "/assets/proyectos/guesss.png"
+      },
+      {
+        "id": "mujeres-de-luz",
+        "nombre": "Mujeres de Luz",
+        "descripcion": "Proyecto país que busca el buen vivir de pueblos originarios que no cuentan con energía eléctrica (3% de la población costarricense) mediante soluciones de energía solar.",
+        "estado": "en-desarrollo",
+        "pilar": "ecosistema",
+        "tipo": "proyecto-social",
+        "beneficiarios": "Comunidades indígenas sin electricidad",
+        "imagen": "/assets/proyectos/mujeres-luz.png"
+      },
+      {
+        "id": "app-bienestar",
+        "nombre": "App de Bienestar Emprendedor",
+        "descripcion": "Aplicación móvil que monitorea estados anímicos de emprendedores mediante preguntas periódicas, ayudándoles a identificar emociones negativas que afectan su bienestar y productividad.",
+        "estado": "en-desarrollo",
+        "pilar": "herramientas",
+        "tipo": "aplicacion-movil",
+        "audiencia": ["emprendedores"],
+        "imagen": "/assets/proyectos/app-bienestar.png"
+      },
+      {
+        "id": "steam-emprendimiento",
+        "nombre": "Experimento STEAM + Emprendimiento",
+        "descripcion": "Proyecto experimental para identificar espacios innovadores de aprendizaje y creación para educación a distancia en el campo de la innovación y el emprendimiento con enfoque STEAM.",
+        "estado": "en-desarrollo",
+        "pilar": "formacion",
+        "tipo": "investigacion-educativa",
+        "imagen": "/assets/proyectos/steam.png"
+      }
+    ],
+    "colaboraciones": [
+      {
+        "id": "faedpyme",
+        "nombre": "Red FAEDPYME",
+        "descripcion": "Colaboración con la Fundación para el Análisis Estratégico y Desarrollo de la Pequeña y Mediana Empresa para estudios comparativos iberoamericanos sobre el impacto de crisis económicas en MIPYMES.",
+        "estado": "activo",
+        "pilar": "investigacion",
+        "tipo": "red-internacional",
+        "paises": ["España", "México", "Colombia", "Chile", "Argentina", "Costa Rica"],
+        "imagen": "/assets/proyectos/faedpyme.png"
+      },
+      {
+        "id": "kolau",
+        "nombre": "Alianza KOLAU",
+        "descripcion": "Alianza con KOLAU, primera plataforma de marketing digital para PYMEs, para impulsar el comercio digital en Costa Rica mediante talleres y actividades de capacitación.",
+        "estado": "activo",
+        "pilar": "ecosistema",
+        "tipo": "alianza-estrategica",
+        "imagen": "/assets/proyectos/kolau.png"
+      },
+      {
+        "id": "cric",
+        "nombre": "Costa Rica Insect Company (CRIC)",
+        "descripcion": "Caso de estudio sobre desempeño innovador: producción de insectos comestibles (harina de grillos) mediante Programa de Socio Productores para elaborar ingredientes alimenticios sostenibles.",
+        "estado": "activo",
+        "pilar": "investigacion",
+        "tipo": "caso-estudio",
+        "imagen": "/assets/proyectos/cric.png"
+      }
+    ],
+    "archivados": [
+      {
+        "id": "turismo-virtual",
+        "nombre": "Turismo Virtual",
+        "descripcion": "Proyecto lúdico y participativo basado en diversión, curiosidad y flexibilidad.",
+        "estado": "archivado",
+        "razon": "Sin desarrollo activo"
+      }
+    ]
+  },
+  "toolkits": [
+    {
+      "id": "toolkit-synthesia",
+      "nombre": "Toolkit Synthesia",
+      "descripcion": "Guía para crear videos con presentadores virtuales generados por IA, útiles para contenido educativo, marketing y presentaciones empresariales.",
+      "categoria": "inteligencia-artificial",
+      "url": "https://express.adobe.com/page/ntN85BFa6TlGK/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/synthesia.jpg"
+    },
+    {
+      "id": "toolkit-chatgpt",
+      "nombre": "Toolkit ChatGPT para Emprendedores",
+      "descripcion": "Recomendaciones prácticas que ChatGPT ofrece a emprendedores para aprovechar al máximo la herramienta de OpenAI en estrategias empresariales.",
+      "categoria": "inteligencia-artificial",
+      "url": "https://express.adobe.com/page/45wvgcgdNEENs/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/chatgpt.jpg"
+    },
+    {
+      "id": "toolkit-emprendedores",
+      "nombre": "Toolkit para Emprendedores",
+      "descripcion": "Conjunto integral de herramientas y recursos esenciales para apoyar a emprendedores en todas las etapas de desarrollo de sus negocios.",
+      "categoria": "emprendimiento",
+      "url": "https://spark.adobe.com/page/DGoLwSGJn1J7x/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/emprendedores.png"
+    },
+    {
+      "id": "toolkit-innovacion",
+      "nombre": "Toolkit Promoción de Innovación y Creatividad",
+      "descripcion": "Actividades y ejercicios prácticos para desarrollar y mejorar la inteligencia creativa personal y empresarial.",
+      "categoria": "innovacion",
+      "url": "https://express.adobe.com/page/B74BhLpW879Cm/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/innovacion.png"
+    },
+    {
+      "id": "toolkit-gestion-digital",
+      "nombre": "Toolkit Gestión Digital",
+      "descripcion": "Herramientas digitales esenciales para la planificación y gestión eficiente de emprendimientos.",
+      "categoria": "digitalizacion",
+      "url": "https://express.adobe.com/page/C2FGciFVNsZxo/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/gestion-digital.png"
+    },
+    {
+      "id": "toolkit-mercadeo",
+      "nombre": "Toolkit de Mercadeo",
+      "descripcion": "Estrategias y herramientas para redes sociales y mercadeo efectivo para emprendedores.",
+      "categoria": "marketing",
+      "url": "https://express.adobe.com/page/72EKMc8Zc7hfP/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/mercadeo.png"
+    },
+    {
+      "id": "toolkit-marketing-digital",
+      "nombre": "Toolkit Marketing Digital y Redes Sociales",
+      "descripcion": "Guía completa para comprender el entorno digital y adaptar estrategias de marketing a los nuevos medios en un paisaje interconectado y en continuo cambio.",
+      "categoria": "marketing",
+      "url": "https://express.adobe.com/page/9oFVZRgluEP4B/",
+      "idioma": "español",
+      "imagen": "/assets/toolkits/marketing-digital.png"
+    }
+  ],
+  "publicaciones": {
+    "informes": [
+      {
+        "id": "pub-covid-pyme",
+        "titulo": "Impacto económico de la crisis COVID-19 sobre la Pyme en Costa Rica",
+        "tipo": "informe",
+        "anio": 2020,
+        "isbn": "978-9930-541-95-1",
+        "formato": "ebook",
+        "url": "https://repositoriotec.tec.ac.cr/handle/2238/13404",
+        "descripcion": "Análisis del impacto de la pandemia sobre las MIPYMES costarricenses, resultado de iniciativa del Observatorio Iberoamericano de la Mipyme.",
+        "autores": ["Equipo OMiPYME", "Red FAEDPYME"]
+      },
+      {
+        "id": "pub-emprendimiento-cantonal-covid",
+        "titulo": "El emprendimiento empresarial cantonal en Costa Rica antes y durante la pandemia COVID-19",
+        "tipo": "ponencia",
+        "anio": 2021,
+        "isbn": "978-9930-607-49-7",
+        "publicacion": "XXVII Informe Estado de la Nación",
+        "url": "https://repositorio.conare.ac.cr/handle/20.500.12337/8214",
+        "descripcion": "Análisis comparativo de patentes municipales para identificar efectos de la pandemia en la actividad económica cantonal."
+      },
+      {
+        "id": "pub-efectos-covid-mipymes",
+        "titulo": "Efectos de la pandemia COVID-19 en las Mipymes de Costa Rica",
+        "tipo": "ponencia",
+        "anio": 2020,
+        "isbn": "978-9930-540-65-7",
+        "publicacion": "XXVI Informe Estado de la Nación",
+        "url": "http://repositorio.conare.ac.cr/handle/20.500.12337/8009"
+      },
+      {
+        "id": "pub-asociacion-emprendimiento",
+        "titulo": "Asociación del emprendimiento empresarial con el desarrollo social en los Cantones de Costa Rica",
+        "tipo": "ponencia",
+        "anio": 2018,
+        "isbn": "978-9930-540-13-8",
+        "publicacion": "XXIV Informe Estado de la Nación",
+        "url": "http://repositorio.conare.ac.cr/handle/20.500.12337/2537"
+      },
+      {
+        "id": "pub-retos-productividad",
+        "titulo": "Los retos para la productividad empresarial en los cantones de Costa Rica",
+        "tipo": "ponencia",
+        "anio": 2017,
+        "isbn": "978-9930-540-08-4",
+        "publicacion": "XXIII Informe Estado de la Nación",
+        "url": "http://repositorio.conare.ac.cr/handle/20.500.12337/1128",
+        "descripcion": "Análisis de estructura económica cantonal, acceso a tecnologías, semiformalidad empresarial y participación de la mujer."
+      },
+      {
+        "id": "pub-democracia-economica",
+        "titulo": "Análisis de la actividad empresarial cantonal: hacia el crecimiento inclusivo",
+        "tipo": "ponencia",
+        "anio": 2016,
+        "isbn": "978-9968-806-98-5",
+        "publicacion": "XXII Informe Estado de la Nación",
+        "url": "http://repositorio.conare.ac.cr/handle/20.500.12337/245"
+      },
+      {
+        "id": "pub-gestion-municipal",
+        "titulo": "La importancia de la gestión municipal en el ecosistema de negocios de la mipyme",
+        "tipo": "ponencia",
+        "anio": 2015,
+        "isbn": "978-9968-806-87-9",
+        "publicacion": "XXI Informe Estado de la Nación",
+        "url": "http://repositorio.conare.ac.cr/handle/20.500.12337/265"
+      }
+    ],
+    "articulos": [
+      {
+        "id": "art-semiformalidad",
+        "titulo": "SME's semi-formality rate in Costa Rica: a clusters approach",
+        "tipo": "articulo",
+        "anio": 2015,
+        "revista": "FAEDPYME International Review",
+        "volumen": "4(7)",
+        "paginas": "47-52",
+        "issn": "2255-078X",
+        "url": "http://repositorio.upct.es/bitstream/handle/10317/5404/ssf.pdf"
+      },
+      {
+        "id": "art-democracia-economica",
+        "titulo": "Los retos de la democracia económica cantonal en Costa Rica: período 2010-2014",
+        "tipo": "articulo",
+        "anio": 2015,
+        "revista": "Revista Nacional de Administración",
+        "volumen": "6(2)",
+        "paginas": "25-37",
+        "issn": "1659-4908",
+        "url": "http://investiga.uned.ac.cr/revistas/index.php/rna/article/view/916"
+      },
+      {
+        "id": "art-software-industry",
+        "titulo": "Revisiting the software industry in Costa Rica: Achievements and challenges",
+        "tipo": "articulo",
+        "anio": 2015,
+        "revista": "Journal of Service Science",
+        "volumen": "8(1)",
+        "paginas": "29-32",
+        "issn": "1941-4722",
+        "url": "https://www.cluteinstitute.com/ojs/index.php/JSS/article/view/9495"
+      },
+      {
+        "id": "art-financiamiento",
+        "titulo": "Condiciones actuales del financiamiento de las MIPYMES costarricenses",
+        "tipo": "articulo",
+        "revista": "Revista TEC Empresarial",
+        "issn": "1659-2395",
+        "url": "http://revistas.tec.ac.cr/index.php/tec_empresarial/article/view/1511"
+      },
+      {
+        "id": "art-genero",
+        "titulo": "Diferencias por género en el emprendimiento empresarial costarricense",
+        "tipo": "articulo",
+        "anio": 2013,
+        "revista": "Revista TEC Empresarial",
+        "issn": "1659-2395",
+        "url": "http://revistas.tec.ac.cr/index.php/tec_empresarial/article/view/1510"
+      }
+    ],
+    "libros": [
+      {
+        "id": "libro-u-a-e",
+        "titulo": "De la U a la E: Experiencias de apoyo y casos de fomento al emprendimiento",
+        "tipo": "libro",
+        "descripcion": "Experiencias exitosas de fomento al emprendimiento en universidades costarricenses con casos de emprendedores universitarios.",
+        "url": "https://repositoriotec.tec.ac.cr/bitstream/handle/2238/12285/De_la_U_a_la_E_ebook.pdf"
+      }
+    ],
+    "documentosTrabajo": [
+      {
+        "id": "doc-digitalizacion-2022",
+        "titulo": "Digitalización y desarrollo sostenible pyme CR",
+        "tipo": "informe",
+        "anio": 2022,
+        "url": "https://omipymes.uned.ac.cr/wp-content/uploads/2022/12/Digitalizacion-y-desarrollo-sostenible-pyme-CR-Informe-Observatorio-2022.pdf"
+      }
+    ]
+  },
+  "equipo": {
+    "direccion": [
+      {
+        "id": "lizette-brenes",
+        "nombre": "Lizette Brenes Bonilla",
+        "cargo": "Directora",
+        "rol": "Liderazgo estratégico y coordinación general",
+        "imagen": "/assets/equipo/lizette-brenes.png"
+      }
+    ],
+    "investigadores": [
+      {
+        "id": "agustin-gomez",
+        "nombre": "Agustín Gómez Meléndez",
+        "cargo": "Investigador",
+        "especialidad": "Análisis de datos, estadística, visualización",
+        "imagen": "/assets/equipo/agustin-gomez.jpg"
+      },
+      {
+        "id": "gabriel-serrano",
+        "nombre": "Gabriel Serrano Rosabal",
+        "cargo": "Investigador",
+        "especialidad": "Innovación, tecnología, talleres",
+        "imagen": "/assets/equipo/gabriel-serrano.jpg"
+      },
+      {
+        "id": "karla-artavia",
+        "nombre": "Karla Artavia Díaz",
+        "cargo": "Investigadora",
+        "especialidad": "Emprendimiento, capacitación",
+        "imagen": "/assets/equipo/karla-artavia.jpeg"
+      }
+    ],
+    "apoyo": [
+      {
+        "id": "katherine-bermudez",
+        "nombre": "Katherine Bermúdez Vargas",
+        "cargo": "Asistente de investigación",
+        "imagen": "/assets/equipo/katherine-bermudez.png"
+      },
+      {
+        "id": "daniela-jimenez",
+        "nombre": "Daniela Jiménez Obando",
+        "cargo": "Asistente de investigación",
+        "imagen": "/assets/equipo/daniela-jimenez.jpeg"
+      },
+      {
+        "id": "maria-fernanda-cerdas",
+        "nombre": "María Fernanda Cerdas Flores",
+        "cargo": "Asistente de investigación",
+        "imagen": "/assets/equipo/maria-fernanda-cerdas.jpg"
+      },
+      {
+        "id": "dinett-rojas",
+        "nombre": "Dinett Rojas Acuña",
+        "cargo": "Asistente administrativa",
+        "imagen": "/assets/equipo/dinett-rojas.jpg"
+      },
+      {
+        "id": "kerby-cespedes",
+        "nombre": "Kerby Céspedes Narváez",
+        "cargo": "Asistente técnico",
+        "imagen": "/assets/equipo/kerby-cespedes.jpg"
+      },
+      {
+        "id": "victoria-hernandez",
+        "nombre": "Victoria Hernández Mora",
+        "cargo": "Asistente de comunicación",
+        "imagen": "/assets/equipo/victoria-hernandez.jpg"
+      },
+      {
+        "id": "vinicio-row",
+        "nombre": "Vinicio Row Pérez",
+        "cargo": "Asistente técnico",
+        "imagen": "/assets/equipo/vinicio-row.jpeg"
+      }
+    ]
+  },
+  "encuestaNacional": {
+    "nombre": "Encuesta Nacional de MIPYMEs",
+    "ediciones": [
+      {
+        "numero": "IV",
+        "anio": 2026,
+        "estado": "en-campo",
+        "aliados": ["MEIC", "UNED"],
+        "descripcion": "Cuarta edición de la encuesta nacional para caracterizar el sector MIPYME costarricense."
+      },
+      {
+        "numero": "III",
+        "anio": 2022,
+        "estado": "finalizada"
+      },
+      {
+        "numero": "II",
+        "anio": 2018,
+        "estado": "finalizada"
+      },
+      {
+        "numero": "I",
+        "anio": 2011,
+        "estado": "finalizada"
+      }
+    ],
+    "cobertura": {
+      "tipo": "nacional",
+      "desagregacion": ["regional", "sectorial", "tamaño"],
+      "sectores": "Clasificación CIIU Rev. 4"
+    }
+  },
+  "aliados": {
+    "gubernamentales": [
+      {
+        "nombre": "Ministerio de Economía, Industria y Comercio",
+        "siglas": "MEIC",
+        "tipo": "ministerio",
+        "url": "https://www.meic.go.cr"
+      },
+      {
+        "nombre": "Sistema de Banca para el Desarrollo",
+        "siglas": "SBD",
+        "tipo": "banca-desarrollo"
+      },
+      {
+        "nombre": "Instituto Mixto de Ayuda Social",
+        "siglas": "IMAS",
+        "tipo": "instituto"
+      }
+    ],
+    "academicos": [
+      {
+        "nombre": "Programa Estado de la Nación",
+        "tipo": "programa-investigacion",
+        "url": "https://estadonacion.or.cr"
+      },
+      {
+        "nombre": "Tecnológico de Costa Rica",
+        "siglas": "TEC",
+        "tipo": "universidad"
+      }
+    ],
+    "internacionales": [
+      {
+        "nombre": "Red FAEDPYME",
+        "tipo": "red-internacional",
+        "paises": ["España", "México", "Colombia", "Chile", "Argentina"]
+      },
+      {
+        "nombre": "GUESSS Global",
+        "tipo": "proyecto-internacional"
+      }
+    ]
+  },
+  "eventos": {
+    "tipos": ["feria", "taller", "conferencia", "webinar"],
+    "feriasPorProvincia": {
+      "alajuela": [
+        {
+          "nombre": "Festejo Día del Padre",
+          "lugar": "Plaza el Encuentro San Carlos",
+          "frecuencia": "anual"
+        },
+        {
+          "nombre": "Feria PYMES Bienestar y Spa",
+          "lugar": "Centro de eventos Rafael Arenas, San Carlos",
+          "organizador": "MEIC"
+        },
+        {
+          "nombre": "Feria Agrícola Artesanal",
+          "lugar": "Parqueo Pipante, Upala",
+          "frecuencia": "semanal",
+          "dia": "sábados"
+        },
+        {
+          "nombre": "Feria del Regalo",
+          "lugar": "Campo ferial de Sarchí Norte",
+          "frecuencia": "anual",
+          "mes": "diciembre"
+        },
+        {
+          "nombre": "Feria PYMES Alajuela Emprende",
+          "lugar": "City Mall",
+          "organizador": "Eventos TOP"
+        },
+        {
+          "nombre": "Mercadito de Emprendedores",
+          "lugar": "Ermita el Llano de Alajuela"
+        },
+        {
+          "nombre": "Feria de Emprendimiento Arte y Diseño",
+          "lugar": "Museo Histórico Cultural Juan Santa María",
+          "organizador": "UCR Sede Interuniversitaria"
+        }
+      ],
+      "cartago": [
+        {
+          "nombre": "Feria de la Romería",
+          "lugar": "Los Ángeles, Cartago",
+          "fechas": "15 julio - 15 agosto",
+          "frecuencia": "anual"
+        }
+      ],
+      "sanJose": [],
+      "heredia": [],
+      "guanacaste": [],
+      "puntarenas": [],
+      "limon": []
+    }
+  },
+  "contacto": {
+    "telefono": "+506 2527-2000",
+    "email": "omipyme@uned.ac.cr",
+    "direccion": {
+      "institucion": "Universidad Estatal a Distancia",
+      "edificio": "Escuela de Ciencias de la Administración",
+      "ciudad": "San José",
+      "pais": "Costa Rica"
+    },
+    "formulario": {
+      "tipos": [
+        "consulta-general",
+        "solicitud-datos",
+        "propuesta-colaboracion",
+        "inscripcion-eventos",
+        "medios-comunicacion"
+      ]
+    }
+  },
+  "recursosExternos": {
+    "propiedadIntelectual": [
+      {
+        "nombre": "Guía de Marcas CR",
+        "organizacion": "WIPO",
+        "url": "https://www.wipo.int/documents/d/business/docs-es-el-secreto-esta-en-la-marca-cr-es.pdf"
+      },
+      {
+        "nombre": "Guía de Derechos de Autor CR",
+        "organizacion": "WIPO",
+        "url": "https://www.wipo.int/documents/d/business/docs-es-expresion-creativa-cr-es.pdf"
+      },
+      {
+        "nombre": "Guía de Patentes CR",
+        "organizacion": "WIPO",
+        "url": "https://www.wipo.int/documents/d/business/docs-es-inventar-el-futuro-cr-es.pdf"
+      },
+      {
+        "nombre": "Guía de Diseños Industriales CR",
+        "organizacion": "WIPO",
+        "url": "https://www.wipo.int/documents/d/business/docs-es-lo-atractivo-esta-en-la-forma-cr-es.pdf"
+      }
+    ]
+  },
+  "seo": {
+    "keywords": [
+      "MIPYME Costa Rica",
+      "emprendimiento",
+      "pequeñas empresas",
+      "observatorio empresarial",
+      "UNED",
+      "innovación",
+      "desarrollo territorial",
+      "patentes comerciales",
+      "indicadores cantonales"
+    ],
+    "descripcion": "Observatorio de Micro, Pequeñas y Medianas Empresas de la UNED Costa Rica. Datos, herramientas e investigación para el ecosistema MIPYME."
+  }
+}
