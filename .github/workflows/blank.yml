@@ -1,0 +1,7 @@
+unzip omipyme-web-repo.zip
+cd omipyme-web
+git init
+git add .
+git commit -m "feat: initial commit - OMiPYME web v2.0"
+git remote add origin https://github.com/omipyme-uned/omipyme-web.git
+git push -u origin main
