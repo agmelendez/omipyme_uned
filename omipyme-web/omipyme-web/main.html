@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OMiPYME - Observatorio de MiPYMES | UNED Costa Rica</title>
+    <meta
+      name="description"
+      content="Genera conocimiento, estrategias y prototipos para mejorar las capacidades para emprender e innovar de la población costarricense, con un enfoque en el desarrollo desde los territorios, sostenible y biocéntrico."
+    />
+    <meta
+      name="keywords"
+      content="MIPYME, Costa Rica, emprendimiento, observatorio, UNED, pequeñas empresas, innovación"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OMiPYME - Observatorio de MiPYMES" />
+    <meta
+      property="og:description"
+      content="Observatorio de Micro, Pequeñas y Medianas Empresas de la UNED Costa Rica. Datos, herramientas e investigación para el ecosistema MIPYME."
+    />
+    <meta property="og:url" content="https://omipymes.uned.ac.cr" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OMiPYME - Observatorio de MiPYMES" />
+    <meta
+      name="twitter:description"
+      content="Observatorio de Micro, Pequeñas y Medianas Empresas de la UNED Costa Rica."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --uned-blue: #003366;
+        --uned-green: #006633;
+        --pilar-observatorio: #1b4f72;
+        --pilar-herramientas: #e67e22;
+        --pilar-investigacion: #27ae60;
+        --pilar-formacion: #8e44ad;
+        --pilar-ecosistema: #16a085;
+        --gray-900: #1f2937;
+        --gray-700: #374151;
+        --gray-500: #6b7280;
+        --gray-200: #e5e7eb;
+        --gray-100: #f3f4f6;
+        --white: #ffffff;
+        font-family: "Open Sans", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #f8fafc;
+        color: var(--gray-900);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--gray-200);
+        z-index: 10;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+      }
+
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--uned-blue);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 16px;
+        font-size: 0.95rem;
+        color: var(--gray-700);
+      }
+
+      .hero {
+        background: linear-gradient(135deg, var(--uned-blue), var(--pilar-observatorio));
+        color: var(--white);
+        padding: 72px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 3vw + 1rem, 3.2rem);
+        margin: 0 0 16px;
+      }
+
+      .hero p {
+        max-width: 680px;
+        margin: 0 0 32px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 1.05rem;
+      }
+
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 20px;
+        border-radius: 999px;
+        font-weight: 600;
+        border: 2px solid transparent;
+      }
+
+      .btn-primary {
+        background: var(--white);
+        color: var(--uned-blue);
+      }
+
+      .btn-secondary {
+        border-color: rgba(255, 255, 255, 0.45);
+        color: var(--white);
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .section-title h2 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+      }
+
+      .section-title p {
+        margin: 0;
+        color: var(--gray-500);
+      }
+
+      .pilares-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .pilar-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 20px;
+        border: 1px solid var(--gray-200);
+      }
+
+      .pilar-card h3 {
+        margin-top: 0;
+      }
+
+      .pilar-tag {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      .tag-observatorio {
+        background: rgba(27, 79, 114, 0.15);
+        color: var(--pilar-observatorio);
+      }
+
+      .tag-herramientas {
+        background: rgba(230, 126, 34, 0.15);
+        color: var(--pilar-herramientas);
+      }
+
+      .tag-investigacion {
+        background: rgba(39, 174, 96, 0.15);
+        color: var(--pilar-investigacion);
+      }
+
+      .tag-formacion {
+        background: rgba(142, 68, 173, 0.15);
+        color: var(--pilar-formacion);
+      }
+
+      .tag-ecosistema {
+        background: rgba(22, 160, 133, 0.15);
+        color: var(--pilar-ecosistema);
+      }
+
+      .highlights {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .highlight-card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 20px;
+        border: 1px solid var(--gray-200);
+      }
+
+      .cta-section {
+        background: var(--gray-100);
+        text-align: center;
+      }
+
+      footer {
+        background: #0f172a;
+        color: rgba(255, 255, 255, 0.8);
+        padding: 32px 0;
+      }
+
+      footer a {
+        color: #fff;
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      @media (max-width: 768px) {
+        .nav {
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">OMiPYME UNED</div>
+        <nav class="nav-links">
+          <a href="/observatorio">Observatorio</a>
+          <a href="/herramientas">Herramientas</a>
+          <a href="/investigacion">Investigación</a>
+          <a href="/formacion">Formación</a>
+          <a href="/ecosistema">Ecosistema</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Observatorio de MiPYMES (OMiPYME+) - UNED Costa Rica</h1>
+        <p>
+          Generamos conocimiento, estrategias y prototipos para fortalecer el ecosistema MIPYME costarricense
+          desde los territorios, con enfoque sostenible y biocéntrico.
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="/contacto">Contactar al equipo</a>
+          <a class="btn btn-secondary" href="/observatorio/datos-abiertos">Explorar datos abiertos</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Modelo de Cinco Pilares</h2>
+          <p>Una arquitectura clara para datos, herramientas, investigación, formación y ecosistema.</p>
+        </div>
+        <div class="pilares-grid">
+          <article class="pilar-card">
+            <span class="pilar-tag tag-observatorio">Observatorio</span>
+            <h3>Observatorio de Datos</h3>
+            <p>
+              Centraliza indicadores, encuestas nacionales y análisis cuantitativo sobre el sector MIPYME
+              costarricense.
+            </p>
+            <a href="/observatorio">Ver sección →</a>
+          </article>
+          <article class="pilar-card">
+            <span class="pilar-tag tag-herramientas">Herramientas</span>
+            <h3>Herramientas Digitales</h3>
+            <p>
+              Aplicaciones interactivas para diagnóstico territorial, planificación y toma de decisiones
+              empresariales.
+            </p>
+            <a href="/herramientas">Ver sección →</a>
+          </article>
+          <article class="pilar-card">
+            <span class="pilar-tag tag-investigacion">Investigación</span>
+            <h3>Investigación</h3>
+            <p>
+              Producción académica y científica sobre emprendimiento, innovación y desarrollo empresarial.
+            </p>
+            <a href="/investigacion">Ver sección →</a>
+          </article>
+          <article class="pilar-card">
+            <span class="pilar-tag tag-formacion">Formación</span>
+            <h3>Formación</h3>
+            <p>
+              Recursos educativos estructurados para fortalecer capacidades emprendedoras e innovadoras.
+            </p>
+            <a href="/formacion">Ver sección →</a>
+          </article>
+          <article class="pilar-card">
+            <span class="pilar-tag tag-ecosistema">Ecosistema</span>
+            <h3>Ecosistema MIPYME</h3>
+            <p>
+              Conexión con aliados, ferias y servicios de apoyo para fortalecer el tejido empresarial.
+            </p>
+            <a href="/ecosistema">Ver sección →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Contenido Destacado</h2>
+          <p>Herramientas, investigación y recursos para impulsar la innovación empresarial.</p>
+        </div>
+        <div class="highlights">
+          <article class="highlight-card">
+            <h3>Selfie Distrital</h3>
+            <p>
+              Plataforma con diagnóstico territorial y mapas interactivos del Índice de Oportunidades
+              Económicas.
+            </p>
+            <a href="https://omipymes.uned.ac.cr/selfiedistrital/">Ir a la plataforma →</a>
+          </article>
+          <article class="highlight-card">
+            <h3>Informe Estado de la Nación</h3>
+            <p>
+              Publicaciones académicas que analizan la actividad empresarial cantonal y los retos de la
+              productividad.
+            </p>
+            <a href="https://repositorio.conare.ac.cr/handle/20.500.12337/8214">Ver informe →</a>
+          </article>
+          <article class="highlight-card">
+            <h3>Podcast Innovación y Emprendimiento</h3>
+            <p>
+              Conversaciones con personas emprendedoras que transforman el mercado nacional e internacional.
+            </p>
+            <a href="https://omipymes.uned.ac.cr/podcast/">Escuchar podcast →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>¿Tienes preguntas sobre el sector MIPYME?</h2>
+          <p>
+            Nuestro equipo de investigadores está listo para ayudarte con consultas, colaboraciones o
+            solicitudes de datos.
+          </p>
+        </div>
+        <div class="cta-group" style="justify-content: center;">
+          <a class="btn btn-primary" href="/contacto">Contactar al equipo</a>
+          <a class="btn btn-secondary" href="mailto:omipyme@uned.ac.cr">Escribir un correo</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>OMiPYME UNED</h3>
+            <p>
+              Observatorio de Micro, Pequeñas y Medianas Empresas de la Universidad Estatal a Distancia.
+            </p>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <p>Teléfono: +506 2527-2000</p>
+            <p>Email: <a href="mailto:omipyme@uned.ac.cr">omipyme@uned.ac.cr</a></p>
+          </div>
+          <div>
+            <h4>Enlaces</h4>
+            <p><a href="https://www.uned.ac.cr">Sitio UNED</a></p>
+            <p><a href="https://omipymes.uned.ac.cr">Sitio oficial</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
