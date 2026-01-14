@@ -1,0 +1,367 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   SISTEMA DE DISEÑO OMiPYME UNED
+   Versión 2.0
+   ============================================ */
+
+@layer base {
+  /* Variables CSS globales */
+  :root {
+    /* Colores institucionales */
+    --color-uned-blue: #003366;
+    --color-uned-green: #006633;
+    
+    /* Colores por pilar */
+    --color-observatorio: #1B4F72;
+    --color-observatorio-light: #2874A6;
+    --color-herramientas: #E67E22;
+    --color-herramientas-light: #F39C12;
+    --color-investigacion: #27AE60;
+    --color-investigacion-light: #2ECC71;
+    --color-formacion: #8E44AD;
+    --color-formacion-light: #9B59B6;
+    --color-ecosistema: #16A085;
+    --color-ecosistema-light: #1ABC9C;
+    
+    /* Tipografía */
+    --font-display: 'Montserrat', system-ui, sans-serif;
+    --font-body: 'Open Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', Consolas, monospace;
+    
+    /* Espaciado base */
+    --spacing-unit: 0.25rem;
+    
+    /* Transiciones */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    
+    /* Border radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-full: 9999px;
+  }
+
+  /* Configuración base del documento */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: theme('colors.gray.800');
+    background-color: theme('colors.gray.50');
+    line-height: 1.6;
+  }
+
+  /* Tipografía base */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: theme('colors.gray.900');
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+  h5 { @apply text-lg md:text-xl; }
+  h6 { @apply text-base md:text-lg; }
+
+  /* Links base */
+  a {
+    color: var(--color-uned-blue);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  a:hover {
+    color: var(--color-observatorio-light);
+  }
+
+  /* Focus visible para accesibilidad */
+  :focus-visible {
+    outline: 2px solid var(--color-uned-blue);
+    outline-offset: 2px;
+  }
+
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.gray.100');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.gray.400');
+    border-radius: var(--radius-full);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.gray.500');
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-uned-blue);
+    color: white;
+  }
+}
+
+@layer components {
+  /* ============================================
+     COMPONENTES REUTILIZABLES
+     ============================================ */
+
+  /* Container principal */
+  .container-omipyme {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1280px;
+  }
+
+  /* Tarjetas de pilar */
+  .pilar-card {
+    @apply relative overflow-hidden rounded-2xl bg-white p-6 shadow-card transition-all duration-300;
+  }
+
+  .pilar-card:hover {
+    @apply shadow-card-hover -translate-y-1;
+  }
+
+  .pilar-card--observatorio {
+    @apply border-l-4 border-pilar-observatorio;
+  }
+
+  .pilar-card--herramientas {
+    @apply border-l-4 border-pilar-herramientas;
+  }
+
+  .pilar-card--investigacion {
+    @apply border-l-4 border-pilar-investigacion;
+  }
+
+  .pilar-card--formacion {
+    @apply border-l-4 border-pilar-formacion;
+  }
+
+  .pilar-card--ecosistema {
+    @apply border-l-4 border-pilar-ecosistema;
+  }
+
+  /* Botones */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium transition-all duration-200;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-uned-blue text-white hover:bg-pilar-observatorio;
+    @apply focus-visible:ring-uned-blue;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+    @apply focus-visible:ring-gray-400;
+  }
+
+  .btn-outline {
+    @apply border-2 border-uned-blue text-uned-blue hover:bg-uned-blue hover:text-white;
+    @apply focus-visible:ring-uned-blue;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  /* Badge de estado */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-activo {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-desarrollo {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-archivado {
+    @apply bg-gray-100 text-gray-600;
+  }
+
+  /* Sección */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-header {
+    @apply mb-12 text-center;
+  }
+
+  .section-title {
+    @apply mb-4 text-3xl font-bold text-gray-900 md:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mx-auto max-w-2xl text-lg text-gray-600;
+  }
+
+  /* Grid de proyectos */
+  .projects-grid {
+    @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  /* Navegación de pilares */
+  .pilar-nav {
+    @apply flex flex-wrap items-center justify-center gap-2;
+  }
+
+  .pilar-nav-item {
+    @apply rounded-full px-4 py-2 text-sm font-medium transition-all;
+  }
+
+  .pilar-nav-item--active {
+    @apply bg-uned-blue text-white;
+  }
+
+  /* Hero */
+  .hero {
+    @apply relative overflow-hidden bg-gradient-to-br from-uned-blue to-pilar-observatorio;
+    @apply py-20 md:py-32 text-white;
+  }
+
+  .hero-content {
+    @apply relative z-10;
+  }
+
+  .hero-pattern {
+    @apply absolute inset-0 opacity-10;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Stats */
+  .stats-grid {
+    @apply grid gap-4 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .stat-card {
+    @apply rounded-xl bg-white/10 backdrop-blur-sm p-6 text-center;
+  }
+
+  .stat-value {
+    @apply text-4xl font-bold;
+  }
+
+  .stat-label {
+    @apply text-sm opacity-80;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    @apply flex items-center gap-2 text-sm text-gray-500;
+  }
+
+  .breadcrumb-separator {
+    @apply text-gray-300;
+  }
+
+  .breadcrumb-current {
+    @apply font-medium text-gray-900;
+  }
+}
+
+@layer utilities {
+  /* ============================================
+     UTILIDADES PERSONALIZADAS
+     ============================================ */
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-uned-blue to-pilar-observatorio bg-clip-text text-transparent;
+  }
+
+  /* Animaciones de entrada */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Stagger para animaciones en lista */
+  .stagger-1 { animation-delay: 100ms; }
+  .stagger-2 { animation-delay: 200ms; }
+  .stagger-3 { animation-delay: 300ms; }
+  .stagger-4 { animation-delay: 400ms; }
+  .stagger-5 { animation-delay: 500ms; }
+
+  /* Overlay gradient */
+  .overlay-gradient {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent;
+  }
+
+  /* Aspect ratios custom */
+  .aspect-card {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Hide scrollbar pero mantener funcionalidad */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Line clamp */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ============================================
+   ESTILOS PARA FUENTES (Google Fonts)
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
