@@ -7,13 +7,12 @@ const nextConfig = {
   // Habilitar exportación estática
   output: 'export',
   
-  // LÓGICA CORREGIDA:
-  // Solo usamos el basePath '/omipyme_uned' en producción.
-  // En desarrollo local, el sitio funcionará en la raíz (localhost:3000) sin dar 404.
+  // SOLUCIÓN AL 404 LOCAL:
+  // Si es producción, usa '/omipyme_uned'. Si es local, usa la raíz vacía ''.
   basePath: isProd ? '/omipyme_uned' : '',
   assetPrefix: isProd ? '/omipyme_uned' : '',
   
-  // Optimización de imágenes (necesario para exportación estática)
+  // Optimización de imágenes
   images: {
     unoptimized: true,
   },
@@ -24,21 +23,12 @@ const nextConfig = {
     removeConsole: isProd,
   },
   
-  // NOTA IMPORTANTE:
-  // Las 'redirects' NO son compatibles con output: 'export'.
-  // He comentado esta sección para evitar conflictos. 
-  // Si necesitas redirecciones en un sitio estático, debes usar meta tags HTML 
-  // o configurarlo en el servidor (GitHub Pages no soporta redirecciones de servidor nativas).
-  /* async redirects() {
-    return [
-      {
-        source: '/selfiedistrital',
-        destination: '/herramientas/selfie-distrital',
-        permanent: true,
-      },
-      // ... otras redirecciones
-    ];
-  },
+  // IMPORTANTE:
+  // He comentado 'headers' y 'redirects' porque PROVOCAN ERRORES
+  // con output: 'export'. GitHub Pages no soporta esto desde next.config.js.
+  
+  /* async headers() { ... },
+  async redirects() { ... }, 
   */
 };
 
