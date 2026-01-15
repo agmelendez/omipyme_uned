@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 200 80">
+  <!-- Logo OMiPYME en blanco para fondo oscuro -->
+  <g transform="translate(10, 20)">
+    <!-- Círculos decorativos -->
+    <circle cx="15" cy="10" r="5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="25" cy="5" r="6" fill="#E6E6E6" opacity="0.8"/>
+    <circle cx="35" cy="10" r="5" fill="#CCCCCC" opacity="0.8"/>
+    <circle cx="10" cy="25" r="6" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="20" cy="30" r="5" fill="#E6E6E6" opacity="0.6"/>
+    <circle cx="30" cy="25" r="4" fill="#CCCCCC" opacity="0.6"/>
+
+    <!-- Texto OMiPYME -->
+    <text x="50" y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF">OMiPYME</text>
+  </g>
+</svg>
