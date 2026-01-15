@@ -9,7 +9,6 @@ El sitio web está completamente configurado y listo para ser servido desde la r
 ```
 /
 ├── main.html              ← Archivo principal de entrada (39 KB)
-├── index.html             ← Página de inicio (idéntica a main.html)
 ├── 404.html               ← Página de error 404
 ├── favicon.ico            ← Favicon del sitio
 ├── apple-touch-icon.png   ← Icono para dispositivos Apple
@@ -90,7 +89,6 @@ Reemplazar archivos en `assets/aliados/`:
 ## 📝 Notas Importantes
 
 - **main.html** es el archivo principal de entrada
-- **index.html** es idéntico a main.html (para compatibilidad)
 - Todos los archivos JavaScript y CSS están en `_next/`
 - El sitio es completamente estático y no requiere Node.js para funcionar
 - Los symlinks (enlaces simbólicos) en assets apuntan a placeholders SVG
@@ -133,7 +131,7 @@ Si necesitas hacer cambios al sitio:
 5. Copiar archivos generados a la raíz:
    ```bash
    cp -r out/* ../../
-   cp out/index.html ../../main.html
+   mv ../../index.html ../../main.html
    ```
 
 ## 📊 Commits Realizados
