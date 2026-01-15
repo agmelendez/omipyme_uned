@@ -34,8 +34,8 @@
     ],
     "logos": {
       "principal": "/assets/logos/omipyme-logo.png",
-      "horizontal": "/assets/logos/omipyme-logo-horizontal.png",
-      "favicon": "/assets/logos/favicon.png"
+      "horizontal": "/assets/logos/omipyme-logo.svg",
+      "favicon": "/favicon.ico"
     },
     "redesSociales": {
       "facebook": "https://facebook.com/omipymeuned",
@@ -103,7 +103,7 @@
           "cantones": 82,
           "distritos": 488
         },
-        "imagen": "/assets/proyectos/selfie-distrital.png"
+        "imagen": "/assets/proyectos/selfie-distrital.svg"
       },
       {
         "id": "territorio-vivo",
@@ -117,7 +117,7 @@
         "audiencia": ["investigadores", "funcionarios", "municipalidades"],
         "indicadores": 250,
         "temas": 80,
-        "imagen": "/assets/proyectos/territorio-vivo.png",
+        "imagen": "/assets/proyectos/territorio-vivo.svg",
         "migracionPendiente": true
       },
       {
@@ -130,7 +130,7 @@
         "tipo": "chatbot",
         "tecnologias": ["NLP", "Base de conocimiento"],
         "audiencia": ["emprendedores", "mipymes"],
-        "imagen": "/assets/proyectos/obi.png"
+        "imagen": "/assets/proyectos/obi.svg"
       },
       {
         "id": "asistente-omipyme",
@@ -143,7 +143,7 @@
         "tecnologias": ["OpenAI GPT-4", "RAG"],
         "audiencia": ["emprendedores", "investigadores"],
         "acceso": "gratuito-limitado",
-        "imagen": "/assets/proyectos/asistente-ia.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "bachillerato-empleabilidad",
@@ -156,7 +156,7 @@
         "modalidad": "educacion-distancia",
         "duracion": "2 años",
         "audiencia": ["adultos", "trabajadores"],
-        "imagen": "/assets/proyectos/bachillerato.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "academia-empresarias",
@@ -168,7 +168,7 @@
         "tipo": "programa-capacitacion",
         "audiencia": ["mujeres-empresarias"],
         "enfoque": "genero",
-        "imagen": "/assets/proyectos/academia-empresarias.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "mhadi",
@@ -180,7 +180,7 @@
         "tipo": "museo-digital",
         "tecnologias": ["Realidad Aumentada", "Gamificación", "Web 3D"],
         "audiencia": ["publico-general", "estudiantes", "turistas"],
-        "imagen": "/assets/proyectos/mhadi.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "podcast",
@@ -192,7 +192,7 @@
         "tipo": "podcast",
         "plataformas": ["Spotify", "Apple Podcasts", "Web"],
         "audiencia": ["emprendedores", "publico-general"],
-        "imagen": "/assets/proyectos/podcast.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "audiolibros",
@@ -204,7 +204,7 @@
         "tipo": "audiolibros",
         "idiomas": ["español", "inglés"],
         "audiencia": ["emprendedores", "estudiantes"],
-        "imagen": "/assets/proyectos/audiolibros.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "diccionario-ngabe",
@@ -216,7 +216,7 @@
         "palabras": 1500,
         "colaboradores": "Comunidades Ngäbe zona sur",
         "audiencia": ["comunidades-indigenas", "investigadores", "publico-general"],
-        "imagen": "/assets/proyectos/diccionario-ngabe.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       }
     ],
     "enDesarrollo": [
@@ -228,7 +228,7 @@
         "pilar": "investigacion",
         "tipo": "investigacion-internacional",
         "redInternacional": "GUESSS Global",
-        "imagen": "/assets/proyectos/guesss.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "mujeres-de-luz",
@@ -238,7 +238,7 @@
         "pilar": "ecosistema",
         "tipo": "proyecto-social",
         "beneficiarios": "Comunidades indígenas sin electricidad",
-        "imagen": "/assets/proyectos/mujeres-luz.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "app-bienestar",
@@ -248,7 +248,7 @@
         "pilar": "herramientas",
         "tipo": "aplicacion-movil",
         "audiencia": ["emprendedores"],
-        "imagen": "/assets/proyectos/app-bienestar.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "steam-emprendimiento",
@@ -257,7 +257,7 @@
         "estado": "en-desarrollo",
         "pilar": "formacion",
         "tipo": "investigacion-educativa",
-        "imagen": "/assets/proyectos/steam.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       }
     ],
     "colaboraciones": [
@@ -269,7 +269,7 @@
         "pilar": "investigacion",
         "tipo": "red-internacional",
         "paises": ["España", "México", "Colombia", "Chile", "Argentina", "Costa Rica"],
-        "imagen": "/assets/proyectos/faedpyme.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "kolau",
@@ -278,7 +278,7 @@
         "estado": "activo",
         "pilar": "ecosistema",
         "tipo": "alianza-estrategica",
-        "imagen": "/assets/proyectos/kolau.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "cric",
@@ -287,7 +287,7 @@
         "estado": "activo",
         "pilar": "investigacion",
         "tipo": "caso-estudio",
-        "imagen": "/assets/proyectos/cric.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       }
     ],
     "archivados": [
@@ -308,7 +308,7 @@
       "categoria": "inteligencia-artificial",
       "url": "https://express.adobe.com/page/ntN85BFa6TlGK/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/synthesia.jpg"
+      "imagen": "/assets/proyectos/placeholder.svg"
     },
     {
       "id": "toolkit-chatgpt",
@@ -317,7 +317,7 @@
       "categoria": "inteligencia-artificial",
       "url": "https://express.adobe.com/page/45wvgcgdNEENs/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/chatgpt.jpg"
+      "imagen": "/assets/proyectos/placeholder.svg"
     },
     {
       "id": "toolkit-emprendedores",
@@ -326,7 +326,7 @@
       "categoria": "emprendimiento",
       "url": "https://spark.adobe.com/page/DGoLwSGJn1J7x/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/emprendedores.png"
+      "imagen": "/assets/proyectos/placeholder.svg"
     },
     {
       "id": "toolkit-innovacion",
@@ -335,7 +335,7 @@
       "categoria": "innovacion",
       "url": "https://express.adobe.com/page/B74BhLpW879Cm/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/innovacion.png"
+      "imagen": "/assets/proyectos/placeholder.svg"
     },
     {
       "id": "toolkit-gestion-digital",
@@ -344,7 +344,7 @@
       "categoria": "digitalizacion",
       "url": "https://express.adobe.com/page/C2FGciFVNsZxo/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/gestion-digital.png"
+      "imagen": "/assets/proyectos/placeholder.svg"
     },
     {
       "id": "toolkit-mercadeo",
@@ -353,7 +353,7 @@
       "categoria": "marketing",
       "url": "https://express.adobe.com/page/72EKMc8Zc7hfP/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/mercadeo.png"
+      "imagen": "/assets/proyectos/placeholder.svg"
     },
     {
       "id": "toolkit-marketing-digital",
@@ -362,7 +362,7 @@
       "categoria": "marketing",
       "url": "https://express.adobe.com/page/9oFVZRgluEP4B/",
       "idioma": "español",
-      "imagen": "/assets/toolkits/marketing-digital.png"
+      "imagen": "/assets/proyectos/placeholder.svg"
     }
   ],
   "publicaciones": {
@@ -513,7 +513,7 @@
         "nombre": "Lizette Brenes Bonilla",
         "cargo": "Directora",
         "rol": "Liderazgo estratégico y coordinación general",
-        "imagen": "/assets/equipo/lizette-brenes.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       }
     ],
     "investigadores": [
@@ -522,21 +522,21 @@
         "nombre": "Agustín Gómez Meléndez",
         "cargo": "Investigador",
         "especialidad": "Análisis de datos, estadística, visualización",
-        "imagen": "/assets/equipo/agustin-gomez.jpg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "gabriel-serrano",
         "nombre": "Gabriel Serrano Rosabal",
         "cargo": "Investigador",
         "especialidad": "Innovación, tecnología, talleres",
-        "imagen": "/assets/equipo/gabriel-serrano.jpg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "karla-artavia",
         "nombre": "Karla Artavia Díaz",
         "cargo": "Investigadora",
         "especialidad": "Emprendimiento, capacitación",
-        "imagen": "/assets/equipo/karla-artavia.jpeg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       }
     ],
     "apoyo": [
@@ -544,43 +544,43 @@
         "id": "katherine-bermudez",
         "nombre": "Katherine Bermúdez Vargas",
         "cargo": "Asistente de investigación",
-        "imagen": "/assets/equipo/katherine-bermudez.png"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "daniela-jimenez",
         "nombre": "Daniela Jiménez Obando",
         "cargo": "Asistente de investigación",
-        "imagen": "/assets/equipo/daniela-jimenez.jpeg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "maria-fernanda-cerdas",
         "nombre": "María Fernanda Cerdas Flores",
         "cargo": "Asistente de investigación",
-        "imagen": "/assets/equipo/maria-fernanda-cerdas.jpg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "dinett-rojas",
         "nombre": "Dinett Rojas Acuña",
         "cargo": "Asistente administrativa",
-        "imagen": "/assets/equipo/dinett-rojas.jpg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "kerby-cespedes",
         "nombre": "Kerby Céspedes Narváez",
         "cargo": "Asistente técnico",
-        "imagen": "/assets/equipo/kerby-cespedes.jpg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "victoria-hernandez",
         "nombre": "Victoria Hernández Mora",
         "cargo": "Asistente de comunicación",
-        "imagen": "/assets/equipo/victoria-hernandez.jpg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       },
       {
         "id": "vinicio-row",
         "nombre": "Vinicio Row Pérez",
         "cargo": "Asistente técnico",
-        "imagen": "/assets/equipo/vinicio-row.jpeg"
+        "imagen": "/assets/proyectos/placeholder.svg"
       }
     ]
   },

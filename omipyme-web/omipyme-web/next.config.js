@@ -4,7 +4,7 @@ const nextConfig = {
   output: 'export',
   
   // Base path para GitHub Pages (ajustar si es necesario)
-  // basePath: '/omipyme-web',
+  basePath: '/omipyme_uned',
   
   // Optimización de imágenes para exportación estática
   images: {
