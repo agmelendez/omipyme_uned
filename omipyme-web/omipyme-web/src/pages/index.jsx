@@ -73,11 +73,11 @@ export default function Home() {
               </div>
               
               <div className="flex flex-wrap items-center justify-center gap-8 grayscale opacity-60">
-                <img src="/assets/aliados/meic.png" alt="MEIC" className="h-12" />
-                <img src="/assets/aliados/sbd.png" alt="SBD" className="h-12" />
-                <img src="/assets/aliados/estado-nacion.png" alt="Estado de la Nación" className="h-12" />
-                <img src="/assets/aliados/tec.png" alt="TEC" className="h-12" />
-                <img src="/assets/aliados/faedpyme.png" alt="FAEDPYME" className="h-12" />
+                <img src="/assets/aliados/meic.svg" alt="MEIC" className="h-12" />
+                <img src="/assets/aliados/sbd.svg" alt="SBD" className="h-12" />
+                <img src="/assets/aliados/estado-nacion.svg" alt="Estado de la Nación" className="h-12" />
+                <img src="/assets/aliados/tec.svg" alt="TEC" className="h-12" />
+                <img src="/assets/aliados/faedpyme.svg" alt="FAEDPYME" className="h-12" />
               </div>
             </div>
           </section>
