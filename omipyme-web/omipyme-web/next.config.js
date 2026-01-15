@@ -1,76 +1,48 @@
 /** @type {import('next').NextConfig} */
+
+// Detectamos si estamos en producción (ej. GitHub Actions)
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  // Habilitar exportación estática para GitHub Pages
+  // Habilitar exportación estática
   output: 'export',
   
-  // Base path para GitHub Pages (ajustar si es necesario)
-  basePath: '/omipyme_uned',
+  // LÓGICA CORREGIDA:
+  // Solo usamos el basePath '/omipyme_uned' en producción.
+  // En desarrollo local, el sitio funcionará en la raíz (localhost:3000) sin dar 404.
+  basePath: isProd ? '/omipyme_uned' : '',
+  assetPrefix: isProd ? '/omipyme_uned' : '',
   
-  // Optimización de imágenes para exportación estática
+  // Optimización de imágenes (necesario para exportación estática)
   images: {
     unoptimized: true,
   },
   
-  // Trailing slashes para mejor compatibilidad
   trailingSlash: true,
   
-  // Configuración de compilación
   compiler: {
-    // Remover console.log en producción
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: isProd,
   },
   
-  // Headers de seguridad
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirecciones (para URLs antiguas)
-  async redirects() {
+  // NOTA IMPORTANTE:
+  // Las 'redirects' NO son compatibles con output: 'export'.
+  // He comentado esta sección para evitar conflictos. 
+  // Si necesitas redirecciones en un sitio estático, debes usar meta tags HTML 
+  // o configurarlo en el servidor (GitHub Pages no soporta redirecciones de servidor nativas).
+  /* async redirects() {
     return [
       {
         source: '/selfiedistrital',
         destination: '/herramientas/selfie-distrital',
         permanent: true,
       },
-      {
-        source: '/chatbot',
-        destination: '/herramientas/obi',
-        permanent: true,
-      },
-      {
-        source: '/podcast',
-        destination: '/formacion/podcast',
-        permanent: true,
-      },
-      {
-        source: '/audiolibros',
-        destination: '/formacion/audiolibros',
-        permanent: true,
-      },
+      // ... otras redirecciones
     ];
   },
+  */
 };
 
-// Análisis de bundle (opcional)
+// Análisis de bundle
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
